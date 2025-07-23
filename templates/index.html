@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+        }
+        nav {
+            background-color: #007bff;
+        }
+        nav .navbar-brand, nav .nav-link {
+            color: #ffffff !important;
+        }
+        nav .nav-link:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 80px 0;
+        }
+        h2 {
+            color: #343a40;
+            margin-bottom: 30px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+        .service-card {
+            background: rgb(201, 203, 206);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+        }
+        .service-icon {
+            font-size: 60px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        @media (max-width: 576px) {
+            .service-icon {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top">
+        <a class="navbar-brand" href="#">Online Student Information Governance Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('student_view') }}">Student Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('login_view') }}">Admin Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- About Section -->
+    <section id="about" class="container text-center">
+        <h2>About Us</h2>
+        <p>At the Student Portal, we aim to create a seamless educational experience for students, teachers, and administrators. Our platform enhances academic engagement and streamlines administrative tasks.</p>
+        <p>We focus on user-friendliness, enabling easy enrollment, attendance tracking, and academic reporting. We believe in fostering an environment that supports learning and growth.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mt-5">
+        <h2 class="text-center">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">📚</div>
+                    <h4>Student Enrollment</h4>
+                    <p>Streamline the enrollment process with easy-to-use forms and tracking capabilities.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">🗓️</div>
+                    <h4>Attendance Management</h4>
+                    <p>Efficiently manage attendance with real-time tracking and reporting.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">📊</div>
+                    <h4>Grade Management</h4>
+                    <p>Maintain and track grades effortlessly, providing insights into student performance.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">📈</div>
+                    <h4>Reporting and Analytics</h4>
+                    <p>Generate comprehensive reports and analyze trends in student data for better decision-making.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">💬</div>
+                    <h4>Communication Tools</h4>
+                    <p>Enhance communication between students, teachers, and parents through integrated messaging.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card text-center">
+                    <div class="service-icon">🛠️</div>
+                    <h4>Customizable Features</h4>
+                    <p>Adapt our platform to meet the unique needs of your institution with customizable features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Student Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
